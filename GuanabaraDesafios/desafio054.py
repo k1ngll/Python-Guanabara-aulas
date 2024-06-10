@@ -6,8 +6,8 @@ ano_atual = datetime.date.today().year
 cont_menores = 0
 cont_maiores = 0
 
-for cont in range (0,7):
-    ano = int(input('Em que ano você nasceu?'))
+for cont in range (1,8):
+    ano = int(input(f'Em que ano a {cont}ª pessoa nasceu?'))
     idade = ano_atual - ano
     if idade < 21:
         cont_menores += 1
@@ -16,5 +16,5 @@ for cont in range (0,7):
 
 
 
-print(f'{cont_menores} Pessoas ainda não antigiram a maioridade\n{cont_maiores} Pessoas ja antigiram a maioridade')
+print(f'\n{cont_menores} Pessoas ainda não antigiram a maioridade\n{cont_maiores} Pessoas ja antigiram a maioridade')
 
