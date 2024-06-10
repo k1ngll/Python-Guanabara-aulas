@@ -1,16 +1,17 @@
 #Crie um programa que leia uma frase qualquer e diga se ela é um palíndromo, desconsiderando os espaços.
 # Ex: APOS A SOPA 
 
-frase = str(input('Digite uma frase: ')).strip()
+frase = str(input('Digite uma frase: ')).strip().lower()
+frase_splitada = frase.split()
+frase_sem_espaco = ''.join(frase_splitada) #substitui os espaços por nada
+inverso = frase_sem_espaco[::-1]
+#inverso_for = ''
+#for letra in range(len(frase_sem_espaco) - 1,-1,-1):
+#    inverso += frase_sem_espaco[letra]
 
-new_frase = frase.replace(' ','')
-
-frase_inversa = new_frase[::-1]
-
-print(new_frase)
-print(frase_inversa)
-
-if frase_inversa[::-1] == new_frase: # se a frase invertida , desinvertida for igual a frase normal ent é um polindromo
-    print(f"A frase '{frase}' é um palíndromo da frase {frase_inversa}'")
+if inverso == frase_sem_espaco:
+    print(f'a frase {frase} é um palidromo')
 else:
-    print(f"A frase '{frase}' não é um palidromo da frase '{frase_inversa}'")
+    print(f'A frase {frase} não é um palidromo')
+
+print(f'Você digitou {frase}\n {frase_sem_espaco} -> {inverso} ')
