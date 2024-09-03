@@ -12,3 +12,5 @@ print(' the number is: {}. \n the double is: {}. \n the triple is: {}. \n and th
 #sem variaveis
 
 print('o dobro é {}. \n o triplo é {}. \n a raiz quadrada de {} é {}.'.format((number*2),(number*3),number ,pow(number,(1/2))   ))
+
+print(f'O dobro de {number} é {double} || O  triplo é {triple} e a raiz quadrada é {square_root}')
